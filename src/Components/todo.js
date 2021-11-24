@@ -193,7 +193,7 @@ export const Todo = () => {
                                                                 <Col sm="4">
                                                                     <Button color="primary" disabled size="sm" onClick={() => handleDetail(el, el.id)}>Chi tiết</Button>{" "}
                                                                     <Button color="primary" disabled size="sm" onClick={() => handleDone(el, el.id)}>Done</Button>{" "}
-                                                                    <Button color="danger" size="sm" onClick={() => handleDelBtn(index)}>Xóa</Button>
+                                                                    <Button color="danger" size="sm" onClick={() => handleDelBtn(el.id)}>Xóa</Button>
                                                                 </Col>
                                                             </Row>
                                                         }
