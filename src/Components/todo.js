@@ -14,7 +14,7 @@ export const Todo = () => {
     const [message, setMessage] = useState("");
     const current = new Date;
     const [task, setTask] = useState({
-        id :randomId.number(12) ,
+        id: randomId.number(12),
         title: "",
         description: "",
         date: `${current.getFullYear()}-${current.getMonth() + 1}-${current.getDate()}`,
@@ -67,7 +67,7 @@ export const Todo = () => {
     }
     const refesh = () => {
         setTask({
-            id :randomId.number(12) , 
+            id: randomId.number(12),
             title: "",
             description: "",
             date: `${current.getFullYear()}-${current.getMonth() + 1}-${current.getDate()}`,
@@ -180,8 +180,8 @@ export const Todo = () => {
                                                                 <Col sm="2">{convertDate(el.date)}</Col>
                                                                 <Col sm="2" className="pr-4">{el.priority}</Col>
                                                                 <Col sm="4">
-                                                                    <Button color="primary" size="sm" onClick={() => handleDone(el, el.id)}>Done</Button>{" "}
                                                                     <Button color="primary" size="sm" onClick={() => handleDetail(el, el.id)}>Chi tiết</Button>{" "}
+                                                                    <Button color="primary" size="sm" onClick={() => handleDone(el, el.id)}>Done</Button>{" "}
                                                                     <Button color="danger" size="sm" onClick={() => handleDelBtn(el.id)}>Xóa</Button>
                                                                 </Col>
                                                             </Row>
@@ -191,9 +191,9 @@ export const Todo = () => {
                                                                 <Col sm="2">{convertDate(el.date)}</Col>
                                                                 <Col sm="2" className="pr-4">{el.priority}</Col>
                                                                 <Col sm="4">
-                                                                    <Button color="primary" hidden size="sm" onClick={() => handleDone(el, index)}>Done</Button>{" "}
-                                                                    <Button color="primary" disabled size="sm" onClick={() => handleDetail(el, index)}>Chi tiết</Button>{" "}
-                                                                    <Button color="danger" disabled size="sm" onClick={() => handleDelBtn(index)}>Xóa</Button>
+                                                                    <Button color="primary" disabled size="sm" onClick={() => handleDetail(el, el.id)}>Chi tiết</Button>{" "}
+                                                                    <Button color="primary" disabled size="sm" onClick={() => handleDone(el, el.id)}>Done</Button>{" "}
+                                                                    <Button color="danger" size="sm" onClick={() => handleDelBtn(index)}>Xóa</Button>
                                                                 </Col>
                                                             </Row>
                                                         }
@@ -206,7 +206,7 @@ export const Todo = () => {
                             </Row>
                             <Row>
                                 <Col className="end">
-                                    <Button color="danger" onClick={()=>handleClearBtn()}>Xóa tổng</Button>
+                                    <Button color="danger" onClick={() => handleClearBtn()}>Xóa tổng</Button>
                                 </Col>
                             </Row>
                         </Row>
