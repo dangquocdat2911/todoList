@@ -202,13 +202,11 @@ export const Todo = () => {
                                             })
                                     }
                                 </Col>
-
+                                
                             </Row>
-                            <Row>
-                                <Col className="end">
+                            <Col className="end">
                                     <Button color="danger" onClick={() => handleClearBtn()}>Xóa tổng</Button>
                                 </Col>
-                            </Row>
                         </Row>
 
                     </div>
